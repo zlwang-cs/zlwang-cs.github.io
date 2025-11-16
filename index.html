@@ -27,11 +27,24 @@
       letter-spacing: 0.01em;
       font-style: italic;
     }
-    .paper-entry {
-      padding: 15px;
-      width: 75%;
-      vertical-align: middle;
+    .highlighted-word {
+      background-color: #ffffd0;
+      padding: 2px 4px;
+      border-radius: 4px;
     }
+
+    .paper-entry {
+      padding: 8px;
+      width: 95%;
+      margin-bottom: 10px;     /* adjust value as you like */
+      display: block;          /* required for margin to work inside <td> */
+    }
+
+    .paper-entry.highlighted {
+      background-color: #ffffd0;
+      border-radius: 6px;      /* optional */
+    }
+
   </style>
 </head>
 
@@ -86,8 +99,11 @@
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
             <tbody>
               <tr>
-                <td style="padding:15px;width:100%;vertical-align:middle">
+                <td style="padding:8px;width:100%;vertical-align:middle">
                   <h2>Publications</h2>
+                  <p>
+                    Some papers are <span class="highlighted-word">highlighted</span>.
+                  </p>
                 </td>
               </tr>
             </tbody>
@@ -97,8 +113,35 @@
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
             <tbody>
 
-              <!-- ReaL -->
+              <!-- Small Proxies (newest arXiv: 2510) -->
               <tr><td class="paper-entry">
+                <a href="https://arxiv.org/abs/2510.01427">
+                  <span class="papertitle">A Tale of LLMs and Induced Small Proxies: Scalable Agents for Knowledge Mining</span>
+                </a>
+                <br>
+                Sipeng Zhang, Longfei Yun, <strong>Zilong Wang</strong>, Jingbo Shang, Letian Peng
+                <br>
+                <em>Preprint</em>, 2024
+                <br>
+                <a href="https://arxiv.org/abs/2510.01427">arXiv</a>
+              </td></tr>
+            
+              <!-- Multi-objective Alignment -->
+              <tr><td class="paper-entry highlighted">
+                <p class="paper-summary">[Adaptive weighting for <u><strong>multi-objective RL</strong></u>, achiving <u><strong>SOTA for all rewards</strong></u>]</p>
+                <a href="https://arxiv.org/abs/2509.11452">
+                  <span class="papertitle">Learning to Optimize Multi-objective Alignment through Dynamic Reward Weighting</span>
+                </a>
+                <br>
+                Yining Lu, <strong>Zilong Wang**</strong>, Shiyang Li, Xin Liu, Changlong Yu, Qingyu Yin, Zhan Shi, Zixuan Zhang, Meng Jiang (** corresponding author)
+                <br>
+                <em>Preprint</em>, 2025
+                <br>
+                <a href="https://arxiv.org/abs/2509.11452">arXiv</a>
+              </td></tr>
+            
+              <!-- ReaL -->
+              <tr><td class="paper-entry highlighted">
                 <p class="paper-summary">[Build <u><strong>effective & reliable coding LLMs</strong></u> with hybrid rewards: program analysis + unit tests]</p>
                 <a href="https://arxiv.org/abs/2505.22704">
                   <span class="papertitle">Training Language Models to Generate Quality Code with Program Analysis Feedback</span>
@@ -111,23 +154,65 @@
                 <a href="https://arxiv.org/abs/2505.22704">arXiv</a> /
                 <a href="https://github.com/yaof20/ReaL">code</a>
               </td></tr>
-
-              <!-- Multi-objective Alignment -->
-              <tr><td class="paper-entry">
-                <p class="paper-summary">[Adaptive weighting for <u><strong>multi-objective RL</strong></u>, achiving <u><strong>SOTA for all rewards</strong></u>]</p>
-                <a href="https://arxiv.org/abs/2509.11452">
-                  <span class="papertitle">Learning to Optimize Multi-objective Alignment through Dynamic Reward Weighting</span>
+            
+              <!-- RRO -->
+              <tr><td class="paper-entry highlighted">
+                <p class="paper-summary">[Rising-reward trajectory mining for <u><strong>efficient process-reward data collection</strong></u>]</p>
+                <a href="https://arxiv.org/abs/2505.20737">
+                  <span class="papertitle">RRO: LLM Agent Optimization Through Rising Reward Trajectories</span>
                 </a>
                 <br>
-                Yining Lu, <strong>Zilong Wang**</strong>, Shiyang Li, Xin Liu, Changlong Yu, Qingyu Yin, Zhan Shi, Zixuan Zhang, Meng Jiang (** corresponding author)
+                <strong>Zilong Wang</strong>, Jingfeng Yang, Sreyashi Nag, Samarth Varshney, Xianfeng Tang, Haoming Jiang, Jingbo Shang, Sheikh Muhammad Sarwar
                 <br>
-                <em>Preprint</em>, 2025
+                <em>COLM</em>, 2025
                 <br>
-                <a href="https://arxiv.org/abs/2509.11452">arXiv</a>
+                <a href="https://arxiv.org/abs/2505.20737">arXiv</a>
               </td></tr>
-
-              <!-- Debug like a Human -->
+            
+              <!-- TableRAG -->
               <tr><td class="paper-entry">
+                <a href="https://arxiv.org/abs/2410.04739">
+                  <span class="papertitle">TableRAG: Million-Token Table Understanding with Language Models</span>
+                </a>
+                <br>
+                Si-An Chen, Lesly Miculicich, Julian Martin Eisenschlos, Zifeng Wang, <strong>Zilong Wang</strong>, Yanfei Chen, Yasuhisa Fujii, Hsuan-Tien Lin, Chen-Yu Lee, Tomas Pfister
+                <br>
+                <em>NeurIPS</em>, 2024
+                <br>
+                <a href="https://arxiv.org/abs/2410.04739">arXiv</a>
+              </td></tr>
+            
+              <!-- OfficeBench -->
+              <tr><td class="paper-entry">
+                <a href="https://arxiv.org/abs/2407.19056">
+                  <span class="papertitle">OfficeBench: Benchmarking Language Agents across Multiple Applications for Office Automation</span>
+                </a>
+                <br>
+                <strong>Zilong Wang</strong>, Yuedong Cui, Li Zhong, Zimin Zhang, Da Yin, Bill Yuchen Lin, Jingbo Shang
+                <br>
+                <em>Preprint</em>, 2024
+                <br>
+                <a href="https://arxiv.org/abs/2407.19056">arXiv</a>
+              </td></tr>
+            
+              <!-- Speculative RAG -->
+              <tr><td class="paper-entry">
+                <a href="https://arxiv.org/abs/2407.08223">
+                  <span class="papertitle">Speculative RAG: Enhancing Retrieval Augmented Generation through Drafting</span>
+                </a>
+                <br>
+                <strong>Zilong Wang</strong>, Zifeng Wang, Long Le, Huaixiu Steven Zheng, Swaroop Mishra, Vincent Perot, Yuwei Zhang, Anush Mattapalli, Ankur Taly, Jingbo Shang, Chen-Yu Lee, Tomas Pfister
+                <br>
+                <em>ICLR</em>, 2025
+                <br>
+                <a href="https://arxiv.org/abs/2407.08223">arXiv</a> /
+                <a class="highlight-tag" href="https://research.google/blog/speculative-rag-enhancing-retrieval-augmented-generation-through-drafting/">
+                  featured: Google Research Blog
+                </a>
+              </td></tr>
+            
+              <!-- Debug like a Human -->
+              <tr><td class="paper-entry highlighted">
                 <p class="paper-summary">[<u><strong>Runtime-verified, stepwise reasoning (via execution trace)</strong></u> for precise LLM-based code debugging]</p>
                 <a href="https://arxiv.org/abs/2402.16906">
                   <span class="papertitle">Debug like a Human: A Large Language Model Debugger via Verifying Runtime Execution Step-by-step</span>
@@ -153,9 +238,53 @@
                   sota: HumanEval 98.2%
                 </a>
               </td></tr>
-
-              <!-- Robustness & Reliability -->
+            
+              <!-- Answer is All You Need -->
               <tr><td class="paper-entry">
+                <a href="https://arxiv.org/abs/2402.09642">
+                  <span class="papertitle">Answer is All You Need: Instruction-following Text Embedding via Answering the Question</span>
+                </a>
+                <br>
+                Letian Peng, Yuwei Zhang, <strong>Zilong Wang</strong>, Jayanth Srinivasa, Gaowen Liu, Zihan Wang, Jingbo Shang
+                <br>
+                <em>NAACL</em>, 2024
+                <br>
+                <a href="https://arxiv.org/abs/2402.09642">arXiv</a> /
+                <a href="https://github.com/zhang-yu-wei/InBedder">code</a>
+              </td></tr>
+            
+              <!-- Chain-of-Table -->
+              <tr><td class="paper-entry highlighted">
+                <p class="paper-summary">[Iterative table transformation powering the <u><strong>first tabular reasoning agent</strong></u>]</p>
+                <a href="https://arxiv.org/abs/2401.04398">
+                  <span class="papertitle">Chain-of-Table: Evolving Tables in the Reasoning Chain for Table Understanding</span>
+                </a>
+                <br>
+                <strong>Zilong Wang</strong>, Hao Zhang, Chun-Liang Li, Julian Martin Eisenschlos, Vincent Perot, Zifeng Wang, Lesly Miculicich, Yasuhisa Fujii, Jingbo Shang, Chen-Yu Lee, Tomas Pfister
+                <br>
+                <em>ICLR</em>, 2024
+                <br>
+                <a href="https://arxiv.org/abs/2401.04398">arXiv</a> /
+                <a class="highlight-tag" href="https://research.google/blog/chain-of-table-evolving-tables-in-the-reasoning-chain-for-table-understanding/">
+                  featured: Google Research Blog
+                </a>
+              </td></tr>
+            
+              <!-- LMDX -->
+              <tr><td class="paper-entry">
+                <a href="https://arxiv.org/abs/2309.10952">
+                  <span class="papertitle">LMDX: Language Model-based Document Information Extraction and Localization</span>
+                </a>
+                <br>
+                Vincent Perot, Kai Kang, Florian Luisier, Guolong Su, Xiaoyu Sun, Ramya Sree Boppana, <strong>Zilong Wang</strong>, Jiaqi Mu, Hao Zhang, Nan Hua
+                <br>
+                <em>ACL</em> Findings, 2024
+                <br>
+                <a href="https://arxiv.org/abs/2309.10952">arXiv</a>
+              </td></tr>
+            
+              <!-- Robustness & Reliability -->
+              <tr><td class="paper-entry highlighted">
                 <p class="paper-summary">[<u><strong>Real-world API reliability evaluation</strong></u> of coding LLMs <u><strong>at scale</strong></u> (LLM wasn't as good as StackOverflow at least in 2024)]</p>
                 <a href="https://arxiv.org/abs/2308.10335">
                   <span class="papertitle">Can ChatGPT replace StackOverflow? A Study on Robustness and Reliability of Large Language Model Code Generation</span>
@@ -171,127 +300,33 @@
                   featured: TheRegister
                 </a>
               </td></tr>
-
-              <!-- Chain-of-Table -->
+            
+              <!-- Few-shot GNN -->
               <tr><td class="paper-entry">
-                <p class="paper-summary">[Iterative table transformation powering the <u><strong>first tabular reasoning agent</strong></u>]</p>
-                <a href="https://arxiv.org/abs/2401.04398">
-                  <span class="papertitle">Chain-of-Table: Evolving Tables in the Reasoning Chain for Table Understanding</span>
+                <a href="https://arxiv.org/abs/2305.14828">
+                  <span class="papertitle">Towards Few-shot Entity Recognition in Document Images: A Graph Neural Network Approach Robust to Image Manipulation</span>
                 </a>
                 <br>
-                <strong>Zilong Wang</strong>, Hao Zhang, Chun-Liang Li, Julian Martin Eisenschlos, Vincent Perot, Zifeng Wang, Lesly Miculicich, Yasuhisa Fujii, Jingbo Shang, Chen-Yu Lee, Tomas Pfister
+                Prashant Krishnan, <strong>Zilong Wang</strong>, Yangkun Wang, Jingbo Shang
                 <br>
-                <em>ICLR</em>, 2024
+                <em>COLING</em>, 2024
                 <br>
-                <a href="https://arxiv.org/abs/2401.04398">arXiv</a> /
-                <a class="highlight-tag" href="https://research.google/blog/chain-of-table-evolving-tables-in-the-reasoning-chain-for-table-understanding/">
-                  featured: Google Research Blog
-                </a>
+                <a href="https://arxiv.org/abs/2305.14828">arXiv</a>
               </td></tr>
-
-              <!-- RRO -->
+            
+              <!-- XML Path -->
               <tr><td class="paper-entry">
-                <p class="paper-summary">[Rising-reward trajectory mining for <u><strong>efficient process-reward data collection</strong></u>]</p>
-                <a href="https://arxiv.org/abs/2505.20737">
-                  <span class="papertitle">RRO: LLM Agent Optimization Through Rising Reward Trajectories</span>
+                <a href="https://arxiv.org/abs/2305.13805">
+                  <span class="papertitle">Towards Zero-shot Relation Extraction in Web Mining: A Multimodal Approach with Relative XML Path</span>
                 </a>
                 <br>
-                <strong>Zilong Wang</strong>, Jingfeng Yang, Sreyashi Nag, Samarth Varshney, Xianfeng Tang, Haoming Jiang, Jingbo Shang, Sheikh Muhammad Sarwar
+                <strong>Zilong Wang</strong>, Jingbo Shang
                 <br>
-                <em>COLM</em>, 2025
+                <em>EMNLP</em> Findings, 2023
                 <br>
-                <a href="https://arxiv.org/abs/2505.20737">arXiv</a>
+                <a href="https://arxiv.org/abs/2305.13805">arXiv</a>
               </td></tr>
-
-              <!-- Horizontal line separator -->
-              <tr><td class="paper-entry">
-                <hr style="border: 0; height: 1px; background-color: #ddd;">
-              </td></tr>
-
-              <!-- Speculative RAG -->
-              <tr><td class="paper-entry">
-                <a href="https://arxiv.org/abs/2407.08223">
-                  <span class="papertitle">Speculative RAG: Enhancing Retrieval Augmented Generation through Drafting</span>
-                </a>
-                <br>
-                <strong>Zilong Wang</strong>, Zifeng Wang, Long Le, Huaixiu Steven Zheng, Swaroop Mishra, Vincent Perot, Yuwei Zhang, Anush Mattapalli, Ankur Taly, Jingbo Shang, Chen-Yu Lee, Tomas Pfister
-                <br>
-                <em>ICLR</em>, 2025
-                <br>
-                <a href="https://arxiv.org/abs/2407.08223">arXiv</a> /
-                <a class="highlight-tag" href="https://research.google/blog/speculative-rag-enhancing-retrieval-augmented-generation-through-drafting/">
-                  featured: Google Research Blog
-                </a>
-              </td></tr>
-
-              <!-- Small Proxies -->
-              <tr><td class="paper-entry">
-                <a href="https://arxiv.org/abs/2510.01427">
-                  <span class="papertitle">A Tale of LLMs and Induced Small Proxies: Scalable Agents for Knowledge Mining</span>
-                </a>
-                <br>
-                Sipeng Zhang, Longfei Yun, <strong>Zilong Wang</strong>, Jingbo Shang, Letian Peng
-                <br>
-                <em>Preprint</em>, 2024
-                <br>
-                <a href="https://arxiv.org/abs/2510.01427">arXiv</a>
-              </td></tr>
-
-              <!-- OfficeBench -->
-              <tr><td class="paper-entry">
-                <a href="https://arxiv.org/abs/2407.19056">
-                  <span class="papertitle">OfficeBench: Benchmarking Language Agents across Multiple Applications for Office Automation</span>
-                </a>
-                <br>
-                <strong>Zilong Wang</strong>, Yuedong Cui, Li Zhong, Zimin Zhang, Da Yin, Bill Yuchen Lin, Jingbo Shang
-                <br>
-                <em>Preprint</em>, 2024
-                <br>
-                <a href="https://arxiv.org/abs/2407.19056">arXiv</a>
-              </td></tr>
-
-              <!-- TableRAG -->
-              <tr><td class="paper-entry">
-                <a href="https://arxiv.org/abs/2410.04739">
-                  <span class="papertitle">TableRAG: Million-Token Table Understanding with Language Models</span>
-                </a>
-                <br>
-                Si-An Chen, Lesly Miculicich, Julian Martin Eisenschlos, Zifeng Wang, <strong>Zilong Wang</strong>, Yanfei Chen, Yasuhisa Fujii, Hsuan-Tien Lin, Chen-Yu Lee, Tomas Pfister
-                <br>
-                <em>NeurIPS</em>, 2024
-                <br>
-                <a href="https://arxiv.org/abs/2410.04739">arXiv</a>
-              </td></tr>
-
-              <!-- Answer is All You Need -->
-              <tr><td class="paper-entry">
-                <a href="https://arxiv.org/abs/2402.09642">
-                  <span class="papertitle">Answer is All You Need: Instruction-following Text Embedding via Answering the Question</span>
-                </a>
-                <br>
-                Letian Peng, Yuwei Zhang, <strong>Zilong Wang</strong>, Jayanth Srinivasa, Gaowen Liu, Zihan Wang, Jingbo Shang
-                <br>
-                <em>NAACL</em>, 2024
-                <br>
-                <a href="https://arxiv.org/abs/2402.09642">arXiv</a> /
-                <a href="https://github.com/zhang-yu-wei/InBedder">code</a>
-              </td></tr>
-
-              <!-- LMDX -->
-              <tr><td class="paper-entry">
-                <a href="https://arxiv.org/abs/2309.10952">
-                  <span class="papertitle">LMDX: Language Model-based Document Information Extraction and Localization</span>
-                </a>
-                <br>
-                Vincent Perot, Kai Kang, Florian Luisier, Guolong Su, Xiaoyu Sun, Ramya Sree Boppana, <strong>Zilong Wang</strong>, Jiaqi Mu, Hao Zhang, Nan Hua
-                <br>
-                <em>ACL</em> Findings, 2024
-                <br>
-                <a href="https://arxiv.org/abs/2309.10952">arXiv</a>
-              </td></tr>
-
-
-
+            
               <!-- VRDU -->
               <tr><td class="paper-entry">
                 <a href="https://arxiv.org/abs/2211.15421">
@@ -306,39 +341,20 @@
                 <a href="https://github.com/google-research/google-research/tree/master/vrdu">code</a> /
                 <a href="https://research.google/resources/datasets/visually-rich-document-understanding/">dataset</a>
               </td></tr>
-
-
-
-              <!-- XML Path -->
+            
+              <!-- MGDoc -->
               <tr><td class="paper-entry">
-                <a href="https://arxiv.org/abs/2305.13805">
-                  <span class="papertitle">Towards Zero-shot Relation Extraction in Web Mining: A Multimodal Approach with Relative XML Path</span>
+                <a href="https://arxiv.org/abs/2211.14958">
+                  <span class="papertitle">MGDoc: Pre-training with Multi-granular Hierarchy for Document Image Understanding</span>
                 </a>
                 <br>
-                <strong>Zilong Wang</strong>, Jingbo Shang
+                <strong>Zilong Wang</strong>, Jiuxiang Gu, Chris Tensmeyer, Nikolaos Barmpalios, Ani Nenkova, Tong Sun, Jingbo Shang, Vlad I. Morariu
                 <br>
-                <em>EMNLP</em> Findings, 2023
+                <em>EMNLP</em>, 2022
                 <br>
-                <a href="https://arxiv.org/abs/2305.13805">arXiv</a>
+                <a href="https://arxiv.org/abs/2211.14958">arXiv</a>
               </td></tr>
-
-
-
-              <!-- Few-shot GNN -->
-              <tr><td class="paper-entry">
-                <a href="https://arxiv.org/abs/2305.14828">
-                  <span class="papertitle">Towards Few-shot Entity Recognition in Document Images: A Graph Neural Network Approach Robust to Image Manipulation</span>
-                </a>
-                <br>
-                Prashant Krishnan, <strong>Zilong Wang</strong>, Yangkun Wang, Jingbo Shang
-                <br>
-                <em>COLING</em>, 2024
-                <br>
-                <a href="https://arxiv.org/abs/2305.14828">arXiv</a>
-              </td></tr>
-
-
-
+            
               <!-- LASER -->
               <tr><td class="paper-entry">
                 <a href="https://arxiv.org/abs/2204.05819">
@@ -352,24 +368,7 @@
                 <a href="https://arxiv.org/abs/2204.05819">arXiv</a> /
                 <a href="https://github.com/zlwang-cs/LASER-release">code</a>
               </td></tr>
-
-
-
-              <!-- MGDoc -->
-              <tr><td class="paper-entry">
-                <a href="https://arxiv.org/abs/2211.14958">
-                  <span class="papertitle">MGDoc: Pre-training with Multi-granular Hierarchy for Document Image Understanding</span>
-                </a>
-                <br>
-                <strong>Zilong Wang</strong>, Jiuxiang Gu, Chris Tensmeyer, Nikolaos Barmpalios, Ani Nenkova, Tong Sun, Jingbo Shang, Vlad I. Morariu
-                <br>
-                <em>EMNLP</em>, 2022
-                <br>
-                <a href="https://arxiv.org/abs/2211.14958">arXiv</a>
-              </td></tr>
-
-
-
+            
               <!-- LayoutReader -->
               <tr><td class="paper-entry">
                 <a href="https://arxiv.org/abs/2108.11591">
@@ -383,9 +382,7 @@
                 <a href="https://arxiv.org/abs/2108.11591">arXiv</a> /
                 <a href="https://github.com/microsoft/unilm/tree/master/layoutreader">code</a>
               </td></tr>
-
-
-
+            
               <!-- DocStruct -->
               <tr><td class="paper-entry">
                 <a href="https://arxiv.org/abs/2010.11685">
@@ -398,9 +395,7 @@
                 <br>
                 <a href="https://arxiv.org/abs/2010.11685">arXiv</a>
               </td></tr>
-
-
-
+            
               <!-- Semantic Capacity -->
               <tr><td class="paper-entry">
                 <a href="https://arxiv.org/abs/2010.01898">
@@ -413,23 +408,20 @@
                 <br>
                 <a href="https://arxiv.org/abs/2010.01898">arXiv</a>
               </td></tr>
-
-
-
-              <!-- TransModality -->
+            
+              <!-- TransModality (no arXiv originally, now with arXiv link) -->
               <tr><td class="paper-entry">
-                <a href="https://doi.org/10.1145/3366423.3380000">
+                <a href="https://arxiv.org/abs/2009.02902">
                   <span class="papertitle">TransModality: An End2End Fusion Method with Transformer for Multimodal Sentiment Analysis</span>
                 </a>
                 <br>
                 <strong>Zilong Wang</strong>, Zhaohong Wan, Xiaojun Wan
                 <br>
                 <em>WWW</em>, 2020
+                <br>
+                <a href="https://arxiv.org/abs/2009.02902">arXiv</a>
               </td></tr>
-
-
-
-
+            
             </tbody>
           </table>
 

@@ -66,6 +66,7 @@
 a {
   color: #1772d0;
   text-decoration: none;
+  transition: color 0.15s ease;
 }
 
 a:focus,
@@ -82,6 +83,7 @@ p,
 a {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
   font-size: 14px;
+  line-height: 1.6;
 }
 
 strong {
@@ -109,6 +111,10 @@ h2 {
   font-size: 32px;
 }
 
+::selection {
+  background: #d4e4f7;
+}
+
 .one {
   width: 160px;
   height: 160px;
@@ -132,4 +138,77 @@ h2 {
 
 span.highlight {
   background-color: #ffffd0;
+}
+
+/* Layout: shared table reset */
+.page-table,
+.section-table {
+  width: 100%;
+  border: 0;
+  border-spacing: 0;
+  border-collapse: separate;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Intro section */
+.intro-text {
+  padding: 2.5%;
+  width: 63%;
+  vertical-align: middle;
+}
+
+.intro-photo {
+  padding: 2.5%;
+  width: 40%;
+  max-width: 40%;
+}
+
+.profile-photo {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+/* Section headers */
+.section-header {
+  padding: 8px;
+  width: 100%;
+  vertical-align: middle;
+}
+
+/* Paper entries */
+.paper-entry {
+  padding: 4px;
+  padding-left: 20px;
+  width: 95%;
+  margin-bottom: 6px;
+  display: block;
+}
+
+/* Email in JetBrains Mono */
+.email {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+}
+
+/* Responsive: narrow screens */
+@media (max-width: 680px) {
+  .intro-text,
+  .intro-photo {
+    display: block;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 4% !important;
+  }
+
+  .intro-photo {
+    text-align: center;
+    padding-top: 0 !important;
+  }
+
+  .profile-photo {
+    max-width: 240px;
+    margin: 0 auto;
+  }
 }

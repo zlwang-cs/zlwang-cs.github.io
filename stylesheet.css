@@ -227,12 +227,28 @@ span.highlight {
     white-space: normal !important;
   }
 
+  /* prevent any cell from overflowing */
+  td, th {
+    max-width: 100%;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+
   /* ensure page doesn't overflow viewport */
   body {
     overflow-x: hidden;
   }
 
+  html {
+    overflow-x: hidden;
+  }
+
   .page-table {
     width: 100% !important;
+    max-width: 100vw !important;
+  }
+
+  .section-table {
+    max-width: 100% !important;
   }
 }

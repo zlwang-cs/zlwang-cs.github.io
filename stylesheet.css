@@ -81,25 +81,25 @@ th,
 tr,
 p,
 a {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-family: 'IBM Plex Sans', Verdana, Helvetica, sans-serif;
   font-size: 14px;
   line-height: 1.6;
 }
 
 strong {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-family: 'IBM Plex Sans', Verdana, Helvetica, sans-serif;
   font-size: 14px;
 }
 
 h2 {
   margin: 0;
   font-weight: normal;
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-family: 'IBM Plex Sans', Verdana, Helvetica, sans-serif;
   font-size: 22px;
 }
 
 .papertitle {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-family: 'IBM Plex Sans', Verdana, Helvetica, sans-serif;
   font-size: 14px;
   font-weight: 700;
 }
@@ -107,7 +107,7 @@ h2 {
 .name {
   padding-top: 20px;
   margin: 0;
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-family: 'IBM Plex Sans', Verdana, Helvetica, sans-serif;
   font-size: 32px;
 }
 
@@ -186,6 +186,16 @@ span.highlight {
   display: block;
 }
 
+/* Venue label (conference + year) in publications */
+.venue-label {
+  padding: 4px 10px;
+  vertical-align: baseline;
+  text-align: left;
+  font-weight: bold;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
 /* Email in JetBrains Mono */
 .email {
   font-family: 'JetBrains Mono', monospace;
@@ -210,5 +220,19 @@ span.highlight {
   .profile-photo {
     max-width: 240px;
     margin: 0 auto;
+  }
+
+  /* prevent venue labels from blowing out layout */
+  .venue-label {
+    white-space: normal !important;
+  }
+
+  /* ensure page doesn't overflow viewport */
+  body {
+    overflow-x: hidden;
+  }
+
+  .page-table {
+    width: 100% !important;
   }
 }

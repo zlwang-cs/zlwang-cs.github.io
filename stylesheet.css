@@ -202,8 +202,31 @@ span.highlight {
   font-size: 13px;
 }
 
-/* Responsive: narrow screens */
+/* ── Global overflow guard ── */
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+/* Force all tables to respect viewport width */
+table {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* All cells wrap instead of pushing layout wide */
+td, th {
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+/* ── Responsive: narrow screens ── */
 @media (max-width: 680px) {
+  .page-table {
+    width: 100% !important;
+  }
+
+  /* Stack intro photo below text */
   .intro-text,
   .intro-photo {
     display: block;
@@ -218,37 +241,17 @@ span.highlight {
   }
 
   .profile-photo {
-    max-width: 240px;
+    max-width: 200px;
     margin: 0 auto;
   }
 
-  /* prevent venue labels from blowing out layout */
+  /* Venue labels can wrap */
   .venue-label {
     white-space: normal !important;
   }
 
-  /* prevent any cell from overflowing */
-  td, th {
-    max-width: 100%;
-    word-break: break-word;
-    overflow-wrap: break-word;
-  }
-
-  /* ensure page doesn't overflow viewport */
-  body {
-    overflow-x: hidden;
-  }
-
-  html {
-    overflow-x: hidden;
-  }
-
-  .page-table {
-    width: 100% !important;
-    max-width: 100vw !important;
-  }
-
-  .section-table {
-    max-width: 100% !important;
+  /* Hide school logos to save space */
+  .edu-logo {
+    display: none;
   }
 }
